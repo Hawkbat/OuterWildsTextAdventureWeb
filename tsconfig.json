@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "rootDir": "./src",
+        "noEmit": true,
+        "strict": true,
+        "strictNullChecks": false,
+        "allowUnusedLabels": false,
+        "noImplicitAny": true,
+        "lib": [
+            "ES2020",
+            "DOM"
+        ]
+    },
+    "include": [
+        "./src/**/*.ts",
+        "./node_modules/@types/p5/global.d.ts"
+    ]
+}

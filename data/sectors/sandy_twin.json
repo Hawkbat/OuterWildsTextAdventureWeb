@@ -1,0 +1,181 @@
+{
+  "Sector Arrival": {"text": "The sandy Hourglass Twin is a largely featureless desert except for a few massive ancient structures.\n\nThere are four cylindrical towers of various sizes encircling the equator.\n\nTwo massive antenna-like structures protrude from the north and south poles.\n\nAn enormous funnel of sand stretches from one Hourglass twin to the other. Sand is flowing off the surface of the sandy twin and draining into the canyons and caverns of the rocky twin."},
+  "Nodes": {
+    "Large Tower": {
+      "position": {
+        "y": -1,
+        "x": 211
+      },
+      "explore": [
+        {
+          "on turn": 0,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 1,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 2,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 3,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
+          "teleport to": "Small Island",
+          "turn cycle": 4
+        }
+      ],
+      "description": "a very large ancient tower"
+    },
+    "Mottled Tower": {
+      "position": {
+        "y": -1,
+        "x": -209
+      },
+      "explore": [
+        {
+          "on turn": 0,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 1,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
+          "teleport to": "Crater",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 2,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 3,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.",
+          "turn cycle": 4
+        }
+      ],
+      "description": "an ancient tower riddled with holes"
+    },
+    "Cracked Tower": {
+      "position": {
+        "y": -194,
+        "x": -2
+      },
+      "explore": [
+        {
+          "on turn": 0,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 1,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 2,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
+          "teleport to": "Glacial Shelf",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 3,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.",
+          "turn cycle": 4
+        }
+      ],
+      "description": "a heavily-fractured ancient tower"
+    },
+    "Time Loop Central": {
+      "position": {
+        "y": 80,
+        "x": -3
+      },
+      "explore": {
+        "text": "see Time Loop Central event screen",
+        "fire event": "time loop central",
+        "reveal paths": [
+          "Twin Towers"
+        ]
+      },
+      "entry point": false,
+      "description": "a secret chamber at the heart of the sandy Hourglass Twin"
+    },
+    "Twin Towers": {
+      "position": {
+        "y": 218,
+        "x": -2
+      },
+      "explore": [
+        {
+          "on turn": 0,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment the rocky Hourglass Twin is directly overhead.\n\nSuddenly the tower fills with light, and the world around you vanishes!",
+          "teleport to": "Time Loop Central",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 1,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Timber Hearth is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 2,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Brittle Hollow is directly overhead.",
+          "turn cycle": 4
+        },
+        {
+          "on turn": 3,
+          "text": "You walk onto the small circular platform in the center of the tower.\nThere is no ceiling, and as the planet turns you watch the heavens rotate above you.\n\nAt this particular moment Giant's Deep is directly overhead.",
+          "turn cycle": 4
+        }
+      ],
+      "description": "two small ancient towers connected by a short walkway"
+    },
+    "Giant Antenna": {
+      "position": {
+        "y": -1,
+        "x": -2
+      },
+      "explore": "A giant antenna protrudes out of the sand and towers above you.\nYou find what used to be a hatch leading into the center of the planet, but it has been sealed shut.",
+      "entry point": true,
+      "description": "a massive antenna-like structure"
+    }
+  },
+  "Connections": [
+    {
+      "Node 2": "Mottled Tower",
+      "Node 1": "Twin Towers"
+    },
+    {
+      "Node 2": "Cracked Tower",
+      "Node 1": "Mottled Tower"
+    },
+    {
+      "Node 2": "Large Tower",
+      "Node 1": "Cracked Tower"
+    },
+    {
+      "Node 2": "Twin Towers",
+      "Node 1": "Large Tower"
+    },
+    {
+      "Node 2": "Mottled Tower",
+      "Node 1": "Giant Antenna"
+    },
+    {
+      "Node 2": "Large Tower",
+      "Node 1": "Giant Antenna"
+    },
+    {
+      "Node 2": "Twin Towers",
+      "one-way": true,
+      "Node 1": "Time Loop Central",
+      "hidden": true
+    }
+  ]
+}

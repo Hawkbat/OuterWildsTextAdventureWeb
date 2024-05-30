@@ -1,0 +1,72 @@
+{
+  "Sector Arrival": {"text": "The surface of Timber Hearth is covered in large forested craters, one of which is home to your entire species."},
+  "Nodes": {
+    "Ancient Mine": {
+      "position": {
+        "y": 11,
+        "x": -176
+      },
+      "explore": "The Nomai were mining this crater for raw materials. Judging from the amount of excavation, they must have been building something enormous.\n\nThere is also a dreamcatcher-like structure near the edge of the crater, and you notice fine grains of sand on a flat circular platform at the center.",
+      "entry point": true,
+      "description": "the ruins of a Nomai mining operation"
+    },
+    "Grotto": {
+      "position": {
+        "y": 11,
+        "x": -80
+      },
+      "explore": {
+        "text": "You discover Nomai research analysing the single-celled organisms they found living in this grotto.\n\nAs you peer into the depths of the pool, you spot an underwater tunnel!",
+        "reveal paths": ["Village"]
+      },
+      "description": "a rocky grotto with a pool of deep-looking water",
+      "allow telescope": false
+    },
+    "Moon": {
+      "position": {
+        "y": -179,
+        "x": 301
+      },
+      "explore": "You discover the ruins of a Nomai observatory.\n\nThey were trying to pick up a signal from something called the Eye of the Universe, but no signal was ever found.",
+      "entry point": true,
+      "description": "a small moon with a few Nomai ruins"
+    },
+    "Village": {
+      "position": {
+        "y": 11,
+        "x": 73
+      },
+      "explore": "You chat with your fellow townsfolk, and they wish you well on your expedition.",
+      "entry point": true,
+      "description": "a tiny rustic village nestled in a crater",
+      "campfire": true
+    },
+    "Observatory": {
+      "position": {
+        "y": -46,
+        "x": 176
+      },
+      "explore": {
+        "text": "You peruse the observatory museum's collection of artifacts brought back from previous space expeditions.\n\nThere's a large exhibit on the 'Nomai', a mysterious alien race that inhabited your solar system thousands of years ago. Very little is known about them, but many of their ruins can still be seen on various planets.\n\nYou talk to the curator and receive the launch codes. Your ship (the ORANGE TRIANGLE) is ready for liftoff!\n\nOn your way out of the museum, the eyes of a Nomai statue start to glow. You see a bright flash, followed by a series of strange images (including the sun going supernova).\n\nWell...that was odd.",
+        "fire event": "learn launch codes"
+      },
+      "description": "a small observatory perched on a ledge overlooking the village"
+    }
+  },
+  "Connections": [
+    {
+      "Node 2": "Grotto",
+      "Node 1": "Ancient Mine"
+    },
+    {
+      "Node 2": "Observatory",
+      "Node 1": "Village"
+    },
+    {
+      "Node 2": "Village",
+      "Node 1": "Grotto",
+      "hidden": true,
+      "description": "an underwater passage through the center of the planet"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "Sector Arrival": {"text": "Welcome to the Quantum Moon"},
+  "Nodes": {
+    "Quantum Desert": {
+      "position": {
+        "y": -36,
+        "x": -2
+      },
+      "quantum location" : 0,
+      "explore": "The surface of the moon is covered in sand and populated with cacti that change locations when you're not looking at them.",
+      "entry point": true,
+      "description": "a quantum desert"
+    },
+    "Quantum Forest": {
+      "position": {
+        "y": -36,
+        "x": -2
+      },
+      "quantum location" : 1,
+      "explore": "You find yourself in a forest of trees that change locations when you're not looking at them. Strangely, you also spot a lamp and a signpost from your village. What are they doing here?",
+      "entry point": true,
+      "description": "a quantum forest"
+    },
+    "Quantum Glacier": {
+      "position": {
+        "y": -36,
+        "x": -2
+      },
+      "quantum location" : 2,
+      "explore": "The surface of the moon is covered in ice. A few craggly trees (and a couple of Ancient lamps) change locations when you're not looking at them.",
+      "entry point": true,
+      "description": "a quantum glacier"
+    },
+    "Quantum Wetlands": {
+      "position": {
+        "y": -36,
+        "x": -2
+      },
+      "quantum location" : 3,
+      "explore": "The surface of the moon is covered in water. The small, ethereal jellyfish floating above it change locations when you're not looking at them.",
+      "entry point": true,
+      "description": "quantum wetlands"
+    },
+    "Quantum Flats": {
+      "position": {
+        "y": -36,
+        "x": -2
+      },
+      "quantum location" : 4,
+      "explore": 
+      {
+        "text" : "You walk onto a flat expanse dotted with piles of quantum rocks that move when you're not looking at them. To your great surprise, a living Ancient stands before you.\n\n The Ancient tells you that the Quantum Moon is actually a piece of whatever the source of the Signal actually is. It gestures to the sky, and you look up to see a distant otherworldly energy cloud surrounded by hundreds of quantum moons.\n\nThe Ancient doesn't know what it is, except that it seems to be the root cause of all quantumn phenoma. If that's true, then what is inside the cloud, and what would happen if it's ever observed by a concious entity?"
+      },
+      "entry point": true,
+      "description": "a lone figure standing in a field of quantum rocks"
+    },
+    "Quantum Tower": {
+      "position": {
+        "y": 90,
+        "x": -4
+      },
+      "quantum location" : 0,
+      "entanglement node" : true,
+      "explore": 
+      {
+        "text" : "You keep your gaze fixed on the ancient tower (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+      },
+      "description": "an ancient tower"
+    },
+    "Quantum Cabin": {
+      "position": {
+        "y": 90,
+        "x": -4
+      },
+      "quantum location" : 1,
+      "entanglement node" : true,
+      "explore": 
+      {
+        "text" : "You keep your gaze fixed on the log cabin (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+      },
+      "description": "a cabin from your village"
+    },
+    "Quantum Cliff Dwelling": {
+      "position": {
+        "y": 90,
+        "x": -4
+      },
+      "quantum location" : 2,
+      "entanglement node" : true,
+      "explore": 
+      {
+        "text" : "You keep your gaze fixed on the ancient cliff dwelling (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+      },
+      "description": "an ancient cliff dwelling"
+    },
+    "Quantum Research Station": {
+      "position": {
+        "y": 90,
+        "x": -4
+      },
+      "quantum location" : 3,
+      "entanglement node" : true,
+      "explore": 
+      {
+        "text" : "You keep your gaze fixed on the ancient research station (so it doesn't change locations as you approach it) and walk inside. There doesn't seem to be anything of interest, although it is extremely dark in here."
+      },
+      "description": "an ancient research station"
+    },
+    "Quantum Shrine": {
+      "position": {
+        "y": 90,
+        "x": -4
+      },
+      "quantum location" : 4,
+      "entanglement node" : true,
+      "signal": "QUANTUM",
+      "explore": 
+      {
+        "text" : "The Nomai seem to have constructed some sort of shrine in honor of the Signal. It's pitch black inside."
+      },
+      "description": "an ancient shrine"
+    }
+  },
+  "Connections": [{
+    "Node 2": "Quantum Tower",
+    "Node 1": "Quantum Desert"
+  },{
+    "Node 2": "Quantum Cabin",
+    "Node 1": "Quantum Forest"
+  },{
+    "Node 2": "Quantum Cliff Dwelling",
+    "Node 1": "Quantum Glacier"
+  },{
+    "Node 2": "Quantum Research Station",
+    "Node 1": "Quantum Wetlands"
+  },{
+    "Node 2": "Quantum Shrine",
+    "Node 1": "Quantum Flats"
+  },]
+}

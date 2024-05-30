@@ -1,0 +1,133 @@
+{
+  "Sector Arrival": {"text": "Dark Bramble is a twisted mass of throny vines shrouded in fog. Shards of ice and rock float around its perimeter, remnants of the host planet it outgrew long ago. Now that the sun is growing bigger and hotter, Dark Bramble is returning to life after a long period of dormancy.\n\nFew dare to venture into Dark Bramble's murky depths, and fewer still (specifically none) ever return.\n\nTurn back, you have so much to live for."},
+  "Nodes": {
+    "Crashed Escape Pod": {
+      "position": {
+        "y": 72,
+        "x": -125
+      },
+      "explore": {
+        "text": "You find the barely-recognizable remains of a Nomai escape pod entangled in a web of vines. You also find a cave in a nearby asteroid where the remaining Nomai took shelter after the crash.\n\nThe survivors discovered that Dark Bramble is actually a giant interdimensional carnivorous plant, and theorized that if they could get a tracking device inside one of the vines, they might be able to follow it back to the roots of Dark Bramble (where the Vessel crashed).",
+        "discover clue": "D_3"
+      },
+      "entry point": true,
+      "description": "a crashed ancient escape pod",
+      "fog light": true,
+      "signal": "BEACON",
+      "probe description": "a light shining through the fog",
+      "gravity": false
+    },
+    "Anglerfish": {
+      "position": {
+        "y": -37,
+        "x": 343
+      },
+      "anglerfish": true
+    },
+    "Anglerfish7": {
+      "position": {
+        "y": -162,
+        "x": 5
+      },
+      "anglerfish": true
+    },
+    "Bramble Outskirts": {
+      "position": {
+        "y": 4,
+        "x": -335
+      },
+      "explore": {
+        "text": " ",
+        "fire event": "explore bramble outskirts"
+      },
+      "entry point": true,
+      "description": "a group of flowering vines",
+      "ship access": true,
+      "gravity": false
+    },
+    "Frozen Jellyfish": {
+      "position": {
+        "y": 143,
+        "x": 108
+      },
+      "explore": {
+        "text": "You find a giant jellyfish frozen in a floating chunk of ice. It doesn't appear electrically-charged, so you move in to investigate.\n\nYou examine the specimen and discover a hollow body cavity just big enough to fit a person. Is this what the traveler was talking about?",
+        "discover clue": "APL_3"
+      },
+      "description": "a frozen jellyfish",
+      "ship access": true,
+      "probe description": "a jellyfish encased in a huge chunk of ice",
+      "gravity": false
+    },
+    "Anglerfish2": {
+      "position": {
+        "y": 132,
+        "x": 269
+      },
+      "anglerfish": true
+    },
+    "Anglerfish4": {
+      "position": {
+        "y": 178,
+        "x": 27
+      },
+      "anglerfish": true
+    },
+    "Anglerfish3": {
+      "position": {
+        "y": -72,
+        "x": -144
+      },
+      "anglerfish": true
+    },
+    "Anglerfish6": {
+      "position": {
+        "y": 22,
+        "x": 188
+      },
+      "anglerfish": true
+    },
+    "Ancient Vessel": {
+      "position": {
+        "y": 47,
+        "x": -24
+      },
+      "explore": {
+        "text": " ",
+        "fire event": "explore ancient vessel"
+      },
+      "entry point": false,
+      "description": "an Ancient derelict",
+      "ship access": true,
+      "gravity": false
+    },
+    "Anglerfish5": {
+      "position": {
+        "y": -143,
+        "x": 184
+      },
+      "anglerfish": true
+    },
+    "Anglerfish Skeleton": {
+      "position": {
+        "y": -44,
+        "x": 51
+      },
+      "explore": {
+        "text": "You meet a grisled traveler living inside the skeleton of a dead anglerfish (its lure is still glowing...maybe it keeps the other anglerfish away).\n\nEven though he's been stranded here for quite some time, he doesn't seem overly eager to head back to civilization.\n\nIn return for not telling anyone his whereabouts, he tells you about a nearby location that holds a secret to reaching the center of Giant's Deep.",
+        "reveal paths": ["Frozen Jellyfish"]
+      },
+      "entry point": true,
+      "description": "the skeleton of an anglerfish",
+      "fog light": true,
+      "signal": "TRAVELER",
+      "probe description": "a light shining through the fog",
+      "gravity": false
+    }
+  },
+  "Connections": [{
+    "Node 2": "Frozen Jellyfish",
+    "Node 1": "Anglerfish Skeleton",
+    "hidden": true
+  }]
+}

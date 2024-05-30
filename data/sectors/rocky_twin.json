@@ -1,0 +1,200 @@
+{
+  "Sector Arrival": {"text": "The rocky Hourglass Twin is crisscrossed with canyons of striated rock, dotted with cacti, and harbors enough surface depressions to hint at an elaborate underground cave network.\n\nAn enormous funnel of sand stretches from one Hourglass twin to the other. Sand appears to be flowing off the surface of the sandy twin and draining into the canyons and caverns of the rocky twin."},
+  "Nodes": {
+    "Lakebed Cavern": {
+      "position": {
+        "y": 77,
+        "x": -1
+      },
+      "explore": {
+        "text": "You find the remains of a Nomai research outpost, including the skeletons of the late researchers. Disturbingly, the skeletons move whenever you stop looking at them.\n\nThis creepy behaviour is being caused by a shard of strange black rock in the center of the cavern (according to the Nomai researchers, it originated from the 'Moon That Wanders').\n\nThe researchers discovered that the quantum shard causes nearby objects to become quantum as well. This even works on living things (provided it's too dark to observe yourself or your surroundings).",
+        "discover clue": "QM_2"
+      },
+      "description": "a dark cave with no way out",
+      "allow telescope": false,
+      "signal": "QUANTUM",
+      "entanglement node": true
+    },
+    "Crashed Escape Pod": {
+      "position": {
+        "y": -181,
+        "x": -95
+      },
+      "explore": {
+        "text": "You discover a crashed Nomai escape pod. According to its logs, it was launched from somewhere inside Dark Bramble.\n\nThe Nomai seem to have immediately retreated underground to escape the intense heat from the Sun.",
+        "reveal paths": ["Underground City"]
+      },
+      "entry point": true,
+      "description": "a crater with a crashed Nomai escape pod",
+      "reveal paths": ["Underground City"],
+      "signal": "BEACON"
+    },
+    "Dried-up Lakebed": {
+      "position": {
+        "y": 199,
+        "x": -3
+      },
+      "explore": {
+        "text": "You meet a fellow traveler who is busy scanning the night sky through a telescope. They tell you of the 'Quantum Moon', a celestial body that moves when you're not looking at it. Apparently the Nomai were extremely interested in it for some reason.\n\nAs you roast a marshmallow, the travel explains that the enormous crater you're sitting in used to be a lake filled with water, just like the dried-up canyons used to be rivers.\n\nThe traveler tells you of a secret cave entrance at the bottom of the lake-bed, and mentions that the Nomai may have discovered something strange down there...",
+        "reveal paths": ["Lakebed Cavern"]
+      },
+      "entry point": true,
+      "description": "a dried-up lakebed with a small campfire",
+      "signal": "TRAVELER",
+      "campfire": true
+    },
+    "Small Cavern": {
+      "position": {
+        "y": 68,
+        "x": -101
+      },
+      "explore": {"text": "At first this cave seems unremarkable, but eventually you notice that sometimes (if you look away and back again) a large slab of unnatural-looking rock appears in the center of the cavern."},
+      "description": "a somewhat uninteresting cavern",
+      "allow telescope": false,
+      "signal": "QUANTUM",
+      "entanglement node": true
+    },
+    "Underground City": {
+      "position": {
+        "y": -87,
+        "x": -5
+      },
+      "explore": {"text": "You discover cliff dwellings nestled amongst the stalactites and stalagmites in an enormouse subterranean cavern.\n\nIt looks like the Nomai lived here for quite some time."},
+      "description": "a spectacular underground city",
+      "allow telescope": false
+    },
+    "Gravity Cannon": {
+      "position": {
+        "y": -61,
+        "x": 163
+      },
+      "explore": {"text": "It looks like this chamber was some sort of cannon the Nomai used to launch spacecraft to other planets."},
+      "description": "a cylindrical chamber lined with large metallic rings",
+      "allow telescope": false
+    },
+    "North Canyon": {"position": {
+      "y": -79,
+      "x": -184
+    }},
+    "Arch Canyon": {
+      "position": {
+        "y": -182,
+        "x": 82
+      },
+      "explore": {
+        "text": "You find an old Nomai stargazing site perched at the top of the canyon.\n\nThe Nomai noticed a certain moon that would randomly appear in a different location whenever it was observed. They speculated that this 'Moon That Wanders' might be related to the Eye of the Universe and resolved to reach it.\n\nAt the bottom of the canyon, you discover two cave entrances leading underground!",
+        "reveal paths": [
+          "Underground City",
+          "Gravity Cannon"
+        ]
+      },
+      "entry point": true,
+      "description": "a narrow canyon filled with arched rock formations",
+      "reveal paths": [
+        "Underground City",
+        "Gravity Cannon"
+      ]
+    },
+    "Fossil Site": {
+      "position": {
+        "y": -35,
+        "x": -100
+      },
+      "explore": {
+        "text": "On the far side of the cavern you find a massive anglerfish fossil embedded in the cave wall. It's lure still has a faint glow to it.\n\nNearby you find the rules to what sounds like a children's game. One player (the 'anglerfish') would close their eyes and try to catch the other players (the 'escape pods') as they attempted to sneak past the anglerfish and reach the goal.",
+        "discover clue": "D_2"
+      },
+      "description": "a large cavern with an enormous fossil set into the wall",
+      "allow telescope": false
+    },
+    "Map Chamber": {
+      "position": {
+        "y": 48,
+        "x": 164
+      },
+      "explore": {
+        "text": "You find schematics for a giant machine the Nomai constructed on the Sandy Hourglass Twin.\n\nThe machine was designed to harness the energy from a supernova.\n\nThe control center is located inside a hollow cavity at the center of the planet, but it is completely sealed off from the surface.",
+        "discover clue": "TLD_3"
+      },
+      "description": "the (under)ground floor of a large cylindrical tower",
+      "allow telescope": false
+    },
+    "South Canyon": {"position": {
+      "y": 98,
+      "x": -184
+    }},
+    "Secret Refuge": {
+      "position": {
+        "y": 7,
+        "x": -4
+      },
+      "explore": {"text": "This place is a tomb. Ancient skeletons litter the ground. On the wall, you find a mural showing a nightmarish comet in the sky above the Hourglass Twins."},
+      "description": "a cramped cavern filled with skeletons",
+      "allow telescope": false
+    }
+  },
+  "Connections": [
+    {
+      "Node 2": "Lakebed Cavern",
+      "Node 1": "Dried-up Lakebed",
+      "one-way": true,
+      "hidden": true
+    },
+    {
+      "Node 2": "Dried-up Lakebed",
+      "Node 1": "Map Chamber",
+      "one-way": true
+    },
+    {
+      "Node 2": "Secret Refuge",
+      "Node 1": "Underground City"
+    },
+    {
+      "Node 2": "Fossil Site",
+      "Node 1": "Underground City"
+    },
+    {
+      "Node 2": "Map Chamber",
+      "Node 1": "Gravity Cannon"
+    },
+    {
+      "Node 2": "Underground City",
+      "Node 1": "Gravity Cannon"
+    },
+    {
+      "Node 2": "Underground City",
+      "Node 1": "Crashed Escape Pod",
+      "hidden": true
+    },
+    {
+      "Node 2": "Underground City",
+      "Node 1": "Arch Canyon",
+      "hidden": true
+    },
+    {
+      "Node 2": "Crashed Escape Pod",
+      "Node 1": "Arch Canyon"
+    },
+    {
+      "Node 2": "Gravity Cannon",
+      "Node 1": "Arch Canyon",
+      "hidden": true
+    },
+    {
+      "Node 2": "Crashed Escape Pod",
+      "Node 1": "North Canyon"
+    },
+    {
+      "Node 2": "Dried-up Lakebed",
+      "Node 1": "South Canyon"
+    },
+    {
+      "Node 2": "South Canyon",
+      "Node 1": "North Canyon"
+    },
+    {
+      "Node 2": "South Canyon",
+      "Node 1": "Small Cavern"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "Sector Arrival": {"text": "Brittle Hollow is both brittle and hollow. The surface is under constant bombardment from its volcanic moon, and every so often a piece of crust breaks free and tumbles into the black hole at the center of the planet.\n\nWatch your step."},
+  "Nodes": {
+    "Archaeologist's Camp": {
+      "position": {
+        "y": -205,
+        "x": -1
+      },
+      "explore": {"text": "You find a fellow traveler strumming a banjo next to a campfire.\n\nThey tell you about a mural in the nearby ruins to the South that depicts the journey of the Nomai to your Solar System.\n\nApparently they came here looking for something..."},
+      "description": "a wooded clearing with a burning campfire",
+      "signal": "TRAVELER",
+      "campfire": true
+    },
+    "Cliff Dwellings": {
+      "position": {
+        "y": -96,
+        "x": -1
+      },
+      "explore": {
+        "text": "You discover an ancient mural with 5 panels.\n\nPanel 1 depicts an interstellar Nomai Vessel receiving a signal from the Eye of the Universe (depicted next to your solar system).\n\nPanel 2 shows the Vessel trapped in Dark Bramble.\n\nPanel 3 shows 3 escape pods being launched from the Vessel.\n\nPanel 4 shows an escape pod being pursued by a giant anglerfish.\n\nPanel 5 shows 1 escape pod crashed on Brittle Hollow, 1 crashed on the Hourglass Twins, and 1 crashed in Dark Bramble.",
+        "discover clue": "D_1"
+      },
+      "description": "ancient dwellings perched on the side of a cliff"
+    },
+    "Glacial Shelf": {
+      "position": {
+        "y": 128,
+        "x": -128
+      },
+      "explore": "You investigate the dreamcatcher-like structure and notice fine grains of sand on a flat circular platform at the center.",
+      "description": "an icy cavern with an alien structure that looks like a dreamcatcher"
+    },
+    "Wooded Crater": {
+      "position": {
+        "y": -61,
+        "x": -193
+      },
+      "explore": "You discover an abandoned campsite and notes belonging to a fellow traveler. It appears they left not too long ago to investigate the ancient ruins at the North Pole.\n\nAnother note mentions the existence of newer ruins to the South.",
+      "entry point": true,
+      "description": "a tree-filled crater with a smoldering campfire",
+      "campfire": true
+    },
+    "Black Hole Station": {
+      "position": {
+        "y": 66,
+        "x": 1
+      },
+      "explore": {
+        "text": "You find a Nomai research station analysing the black hole at the center of the planet. The Nomai used this research to develop a new method of teleportation involving two components: a transmitter tower and a receiver platform. These teleporters only activate when the transmitter is aimed at its corresponding receiver.\n\nThe Nomai constructed a network of these teleporters (one for each planet) on the Sandy Hourglass Twin to facilitate the construction of a giant machine on the Sandy Hourglass Twin.",
+        "discover clue": "TLD_2"
+      },
+      "description": "an ancient research station dangling precariously over the black hole"
+    },
+    "Ancient Tower": {
+      "position": {
+        "y": 128,
+        "x": 125
+      },
+      "explore": [
+        {
+          "text": "You discover ancient records about the Quantum Moon. The Quantum Moon sometimes visits a 5th location outside the Solar System. The Nomai discovered a way to ride the Quantum Moon to this location, where they witnessed the Source of the Signal.",
+          "discover clue": "QM_3"
+        },
+        {"text": "You try to enter the tower through its base, but the entry ramp has long-since disintegrated and the pull of gravity is too strong..."}
+      ],
+      "entry point": true,
+      "description": "an ancient tower jutting through the planet's crust",
+      "signal": "QUANTUM"
+    },
+    "Ancient Observatory": {
+      "position": {
+        "y": 216,
+        "x": 0
+      },
+      "explore": {
+        "text": "You discover what looks like an analysis of weather patterns on Giant's Deep. According to the findings, most tornadoes on Giant's Deep have strong upward winds, but some tornadoes rotate counterclockwise and have downward winds.\n\nYou find schematics for a large probe launcher that was built in orbit around Giant's Deep.\n\nIn another corner you find records that the Nomai observed the Quantum Moon in 4 locations - Hourglass Twins, Brittle Hollow, Timber Hearth, and Giants Deep - noting that sometimes it would vanish completely.",
+        "discover clue": "APL_2"
+      },
+      "description": "a cavern filled with ancient technology"
+    },
+    "Escape Pod Crash Site": {
+      "position": {
+        "y": -58,
+        "x": 178
+      },
+      "explore": "You discover a crashed ancient escape pod. According to its logs, it was launched from somewhere inside Dark Bramble.\n\nIt looks like the Nomai evacuated the crash site and headed for the North Pole.",
+      "entry point": true,
+      "description": "a crater with a crashed ancient escape pod",
+      "signal": "BEACON"
+    }
+  },
+  "Connections": [
+    {
+      "Node 2": "Glacial Shelf",
+      "Node 1": "Wooded Crater"
+    },
+    {
+      "Node 2": "Ancient Observatory",
+      "Node 1": "Glacial Shelf"
+    },
+    {
+      "Node 2": "Black Hole Station",
+      "Node 1": "Glacial Shelf"
+    },
+    {
+      "Node 2": "Archaeologist's Camp",
+      "Node 1": "Wooded Crater"
+    },
+    {
+      "Node 2": "Archaeologist's Camp",
+      "Node 1": "Escape Pod Crash Site"
+    },
+    {
+      "Node 2": "Ancient Tower",
+      "Node 1": "Escape Pod Crash Site"
+    },
+    {
+      "Node 2": "Glacial Shelf",
+      "Node 1": "Ancient Tower"
+    },
+    {
+      "Node 2": "Cliff Dwellings",
+      "Node 1": "Archaeologist's Camp"
+    }
+  ]
+}

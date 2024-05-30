@@ -1,0 +1,30 @@
+{
+  "Sector Arrival": {"text": "You warp into the Eye of the Universe"},
+  "Nodes": {
+    "Ancient Vessel 2": {
+      "name": "Ancient Vessel",
+      "position": {
+        "y": 200,
+        "x": 0
+      },
+      "explore": "The Vessel's warp drive is officially spent...looks like this is the end of the line.",
+      "description": "an ancient derelict",
+      "gravity": false
+    },
+    "The Eye of the Universe": {
+      "position": {
+        "y": 0,
+        "x": 0
+      },
+      "explore": {"text": "see event screen", "fire event" : "older than the universe"},
+      "description": "???",
+      "gravity": false
+    },
+  },
+  "Connections": [
+    {
+      "Node 2": "The Eye of the Universe",
+      "Node 1": "Ancient Vessel 2"
+    }
+  ]
+}

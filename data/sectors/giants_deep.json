@@ -1,0 +1,151 @@
+{
+  "Sector Arrival": {"text": "Giant's Deep is a turbulent world home to massive tornadoes and a huge spherical ocean.\n\nThe small islands that dot the ocean's surface are often lifted into the atmosphere by passing tornadoes, causing them to fall back into the ocean with a tremendous splash.\n\nAs you approach the planet, you notice a small Nomai Space Station in low orbit."},
+  "Nodes": {
+    "Abyss": {
+      "position": {
+        "y": 91,
+        "x": -2
+      },
+      "explore": [{
+        "text": "You explore the inky depths and discover the 'Echo Chamber' that broke off of the Nomai probe launcher.\n\nInside you discover what appears to be a massive data archive. As you poke around, you gradually realize that these data archives were designed to preserve information across breaks in the flow of time itself.\n\nIn the center of the chamber, a projector displays the cumulative trajectories of hundreds of millions of probes that were launched out of the solar system in every possible direction. It looks like one of them successfully located the Eye of the Universe! You make sure to jot down the coordinates...",
+        "fire event": "learn signal coordinates"
+      }],
+      "entry point": false,
+      "description": "the inky depths of the ocean",
+      "ship access": false,
+      "probe description": "a crackling energy barrier surrounding the deepest part of the ocean",
+      "gravity": false
+    },
+    "Quantum Island": {
+      "position": {
+        "y": -154,
+        "x": 124
+      },
+      "explore": {
+        "text": "You find a large pile of strange black rocks that move when you're not observing them!\nThe Nomai theorized that these rocks originated from the Quantum Moon that sometimes appears in orbit around Giant's Deep. They also discovered that, oddly enough, observing an image of the rocks had the same effect as observing the rocks directly.",
+        "discover clue": "QM_1"
+      },
+      "entry point": true,
+      "description": "a small island with a pile of otherworldly black rocks",
+      "signal": "QUANTUM"
+    },
+    "Zen Island": {
+      "position": {
+        "y": 57,
+        "x": -195
+      },
+      "explore": "You meet a fellow traveler, who tells you that something fell out of the sky and sank into the ocean not too long ago.\n\nThey also tell you that one of the other travelers made several attempts to reach the bottom of the ocean. Unfortunately, that same traveler left on a mission to Dark Bramble several years ago and hasn't been heard from since...",
+      "entry point": true,
+      "description": "a small wooded island",
+      "signal": "TRAVELER",
+      "probe description": "an island with a plume of campfire smoke rising into the sky",
+      "campfire": true
+    },
+    "Nomai Space Station": {
+      "position": {
+        "y": -127,
+        "x": -352
+      },
+      "explore": {
+        "text": "You discover a (heavily damaged) Nomai space station in low orbit around Giant's Deep. Closer inspection reveals that it's actually a probe launcher of some sort, although it looks like the probe has already been launched.\n\nA nearby computer terminal indicates that the station was damaged during the launch of the probe, and that a module called the 'Echo Chamber' broke away completely and fell into Giant's Deep.",
+        "discover clue": "APL_1"
+      },
+      "entry point": true,
+      "description": "an ancient space station in low orbit around Giant's Deep",
+      "gravity": false
+    },
+    "Mid-Ocean": {
+      "position": {
+        "y": -61,
+        "x": -3
+      },
+      "explore": [
+        {"text": "You fly around underwater and admire the giant electric jellyfish that swim past your viewport."},
+        {
+          "text": "You abandon your ship and swim inside a passing jellyfish.\n\nIt drifts downwards into Abyss, taking you along for the ride.",
+          "move to": "Abyss",
+          "require clue": "APL_3"
+        }
+      ],
+      "entry point": false,
+      "description": "the ocean's middle zone, home to giant jellyfish",
+      "ship access": true,
+      "probe description": "giant jellyfish drifting up and down through the ocean's depths",
+      "gravity": false
+    },
+    "Small Island": {
+      "position": {
+        "y": 136,
+        "x": 148
+      },
+      "explore": "You investigate the dreamcatcher-like structure and notice fine grains of sand on a flat circular platform at the center.",
+      "description": "a small island with an alien structure that looks like a dreamcatcher"
+    },
+    "Antenna Island": {
+      "position": {
+        "y": 45,
+        "x": 195
+      },
+      "explore": {
+        "text": "A strange antenna protrudes from the center of this island and reaches into the sky.\n\nYou find a passage leading inside the island where you discover a strange ancient device.\n\nA clay pot rests on a pedistal in the center of an energy field. The pot starts to slide off the pedistal and shatters on the floor. There is a bright flash of light and you watch as the broken pieces reassemble themselves back onto the pedistal! The pot tumbles to the ground once more and the cycle continues...\n\nThe Nomai records you find are fairly cryptic, but it sounds like they wanted to build a much bigger version of this contraption...provided they could generate the massive amount of energy necessary to run it.",
+        "discover clue": "TLD_1"
+      },
+      "entry point": true,
+      "description": "a small island with a strange antenna reaching into the sky"
+    },
+    "Storm Cell": {
+      "position": {
+        "y": -148,
+        "x": -130
+      },
+      "explore": [
+        {"text": "You fly into a turbulent storm cell where massive tornadoes roam the ocean's surface.\n\nYou accidentally fly into one and are briefly launched into the upper-atmosphere by the tornado's powerful vortex.\n\nYou plummet back down to the surface, where you discover a small Nomai research station. It looks like the researchers were monitoring the tornadoes and reporting their findings to the observatory on Brittle Hollow."},
+        {
+          "text": "You identify a tornado that is rotating counter-clockwise and fly inside.\n\nYour ship is violently propelled deep underwater by the strong downward vortex!",
+          "require clue": "APL_2",
+          "move to": "Mid-Ocean"
+        }
+      ],
+      "entry point": true,
+      "description": "a violent storm cell full of tornadoes",
+      "ship access": true,
+      "gravity": false
+    }
+  },
+  "Connections": [
+    {
+      "Node 2": "Antenna Island",
+      "Node 1": "Small Island"
+    },
+    {
+      "fail event": "dive attempt",
+      "Node 2": "Zen Island",
+      "one-way": "true",
+      "Node 1": "Mid-Ocean"
+    },
+    {
+      "fail event": "dive attempt",
+      "Node 2": "Quantum Island",
+      "one-way": "true",
+      "Node 1": "Mid-Ocean"
+    },
+    {
+      "fail event": "dive attempt",
+      "Node 2": "Antenna Island",
+      "one-way": "true",
+      "Node 1": "Mid-Ocean"
+    },
+    {
+      "fail event": "dive attempt",
+      "Node 2": "Storm Cell",
+      "one-way": "true",
+      "Node 1": "Mid-Ocean"
+    },
+    {
+      "fail event": "barrier attempt",
+      "Node 2": "Mid-Ocean",
+      "one-way": "true",
+      "Node 1": "Abyss"
+    }
+  ]
+}
