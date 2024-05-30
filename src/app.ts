@@ -7,7 +7,7 @@ import { Locator } from "./Locator";
 import { PlayerData } from "./PlayerData";
 import { StatusFeed } from "./StatusFeed";
 import { TimeLoop } from "./TimeLoop";
-import { Minim, println } from "./compat";
+import { Minim, preloadAudio, preloadJSONObject, println } from "./compat";
 
 /*** GLOBALS ***/
 export const TEXT_SIZE: number = 14;
@@ -36,6 +36,21 @@ let deltaMillis: number;
 export let smallFontData: Font;
 export let mediumFontData: Font;
 
+(window as any).preload = function preload(): void {
+  smallFontData = loadFont("data/fonts/Inconsolata.ttf");
+  mediumFontData = loadFont("data/fonts/Inconsolata.ttf");
+  preloadAudio("data/audio/ow_kazoo_theme.mp3");
+  preloadJSONObject("data/sectors/brittle_hollow.json");
+  preloadJSONObject("data/sectors/comet.json");
+  preloadJSONObject("data/sectors/dark_bramble.json");
+  preloadJSONObject("data/sectors/eye_of_the_universe.json");
+  preloadJSONObject("data/sectors/giants_deep.json");
+  preloadJSONObject("data/sectors/quantum_moon.json");
+  preloadJSONObject("data/sectors/rocky_twin.json");
+  preloadJSONObject("data/sectors/sandy_twin.json");
+  preloadJSONObject("data/sectors/timber_hearth.json");
+};
+
 (window as any).setup = function setup(): void
 {
   createCanvas(960, 720);
@@ -43,16 +58,13 @@ export let mediumFontData: Font;
   colorMode(HSB, 360, 100, 100, 100);
   rectMode(CENTER);
   ellipseMode(CENTER);
-
-  smallFontData = loadFont("fonts/Inconsolata.ttf");
-  mediumFontData = loadFont("fonts/Inconsolata.ttf");
   
   smallFont();
     
   minim = new Minim();
 
   initGame();
-}
+};
 
 function initGame(): void
 {
@@ -67,7 +79,7 @@ function initGame(): void
   
   gameManager.newGame();
   
-  println("Load time: " + (millis() - startLoadTime));
+  println("Load time:", (millis() - startLoadTime));
 }
 
 (window as any).draw = function draw(): void
@@ -82,7 +94,7 @@ function initGame(): void
   lastMillis = millis();
   
   //println(deltaMillis);
-}
+};
 
 export function frequencyToString(frequency: Frequency): string
 {

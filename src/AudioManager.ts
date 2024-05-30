@@ -8,7 +8,7 @@ export class SoundLibrary
   static loadSounds(): void
   {
     println("Sounds loading...");
-    SoundLibrary.kazooTheme = minim.loadFile("audio/ow_kazoo_theme.mp3");
+    SoundLibrary.kazooTheme = minim.loadFile("data/audio/ow_kazoo_theme.mp3");
   }
 }
 
@@ -16,7 +16,7 @@ export class AudioManager
 {
   static currentSound: AudioPlayer;
   
-  AudioManager()
+  constructor()
   {
     SoundLibrary.loadSounds();
   }

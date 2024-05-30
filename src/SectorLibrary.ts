@@ -14,7 +14,7 @@ export class Comet extends Sector
   load(): void
   {
     this._name = "the Comet";
-    this.loadFromJSON("sectors/comet.json");
+    this.loadFromJSON("data/sectors/comet.json");
     //setAnchorOffset(100, 30);
   }
   
@@ -31,7 +31,7 @@ export class RockyTwin extends Sector
   load(): void
   {
     this._name = "the rocky Hourglass Twin";
-    this.loadFromJSON("sectors/rocky_twin.json");
+    this.loadFromJSON("data/sectors/rocky_twin.json");
     //setAnchorOffset(100, 30);
   }
   
@@ -48,7 +48,7 @@ export class SandyTwin extends Sector
   load(): void
   {
     this._name = "the sandy Hourglass Twin";
-    this.loadFromJSON("sectors/sandy_twin.json");
+    this.loadFromJSON("data/sectors/sandy_twin.json");
     //setAnchorOffset(100, 30);
   }
   
@@ -65,7 +65,7 @@ export class TimberHearth extends Sector
   load(): void
   {
     this._name = "Timber Hearth";
-    this.loadFromJSON("sectors/timber_hearth.json");
+    this.loadFromJSON("data/sectors/timber_hearth.json");
     //setAnchorOffset(100, 30);
   }
   
@@ -82,7 +82,7 @@ export class BrittleHollow extends Sector
   load(): void
   { 
     this._name = "Brittle Hollow";
-    this.loadFromJSON("sectors/brittle_hollow.json");
+    this.loadFromJSON("data/sectors/brittle_hollow.json");
   }
   
   drawSectorBackdrop(): void
@@ -143,7 +143,7 @@ export class GiantsDeep extends Sector
   load(): void
   { 
     this._name = "Giant's Deep";
-    this.loadFromJSON("sectors/giants_deep.json");
+    this.loadFromJSON("data/sectors/giants_deep.json");
     this.setAnchorOffset(0, 60);
   }
   
@@ -177,12 +177,12 @@ export class DarkBramble extends Sector
   load(): void
   {
     this._name = "Dark Bramble";
-    this.loadFromJSON("sectors/dark_bramble.json");
+    this.loadFromJSON("data/sectors/dark_bramble.json");
 
     for (let i: number = 0; i < this._fogLightNodes.length; i++)
     {
       const index: number = int(random(0, this._fogLightPositions.length));
-      //println("pos: " + _fogLightPositions.get(index));
+      //println("pos:", this._fogLightPositions[index]);
       this._fogLightNodes[i].setPosition(this._fogLightPositions[index]);
       this._fogLightPositions.splice(index, 1);
     }
@@ -228,7 +228,7 @@ export class QuantumMoon extends Sector
   load(): void
   {
     this._name = "Quantum Moon";
-    this.loadFromJSON("sectors/quantum_moon.json");
+    this.loadFromJSON("data/sectors/quantum_moon.json");
     //setAnchorOffset(100, 30);
   }
 
@@ -318,7 +318,7 @@ export class EyeOfTheUniverse extends Sector
   load(): void
   {
     this._name = "The Thing Older Than The Universe";
-    this.loadFromJSON("sectors/eye_of_the_universe.json");
+    this.loadFromJSON("data/sectors/eye_of_the_universe.json");
   }
 
   allowTelescope(): boolean {return false;}

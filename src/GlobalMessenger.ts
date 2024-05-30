@@ -19,7 +19,7 @@ export class GlobalMessenger
 		{
 			this._observers.push(observer);
 		}
-		//println("Observer Count: " + _observers.size());
+		//println("Observer Count:", this._observers.length);
 	}
 
 	removeObserver(observer: GlobalObserver): void

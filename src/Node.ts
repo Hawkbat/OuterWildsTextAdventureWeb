@@ -111,7 +111,7 @@ export class OWNode extends Entity implements ButtonObserver, GlobalObserver
   {
     this._nodeJSONObj.getJSONObject("position").setFloat("x", this.position.x);
     this._nodeJSONObj.getJSONObject("position").setFloat("y", this.position.y);
-    println(this._id + " position saved: " + this.position);
+    println(this._id + " position saved:", this.position);
   }
 
   onReceiveGlobalMessage(message: Message): void

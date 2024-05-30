@@ -184,7 +184,7 @@ export class Player extends Actor
   update(): void
   {
     super.update();
-    //println(_targetScreenPos);
+    //println(this._targetScreenPos);
   }
   
   draw(): void

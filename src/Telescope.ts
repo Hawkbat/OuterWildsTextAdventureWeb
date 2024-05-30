@@ -66,11 +66,11 @@ export class Telescope
 		{
 			if (this._frequency == Frequency.BEACON)
 			{
-				frequencyText = "Unknown 001: Frequency";
+				frequencyText = "Unknown Frequency 001";
 			}
 		    else if (this._frequency == Frequency.QUANTUM)
 		    {
-		    	frequencyText = "Unknown 002: Frequency";
+		    	frequencyText = "Unknown Frequency 002";
 		    }
 		}
 

@@ -63,8 +63,8 @@ export class Sector implements NodeObserver, GlobalObserver
     {
       const connection: JSONObject = connectionJSONArray.getJSONObject(i);
       
-      const node1: OWNode = this.getNode(connection.getString("1: Node"));
-      const node2: OWNode = this.getNode(connection.getString("2: Node"));
+      const node1: OWNode = this.getNode(connection.getString("Node 1"));
+      const node2: OWNode = this.getNode(connection.getString("Node 2"));
 
       this._nodeConnections.push(new NodeConnection(node1, node2, connection));
     }
@@ -78,7 +78,7 @@ export class Sector implements NodeObserver, GlobalObserver
   saveSectorJSON(): void
   {
     saveJSONObject(this._sectorJSON, "data/" + this._JSONFilename);
-    println("JSON: Sector saved");
+    println("Sector JSON saved");
   }
   
   load(): void
@@ -106,10 +106,10 @@ export class Sector implements NodeObserver, GlobalObserver
 
   onArrival(): void
   {
-    if (!this._skipArrivalScreen && this._sectorJSON.hasKey("Arrival: Sector"))
+    if (!this._skipArrivalScreen && this._sectorJSON.hasKey("Sector Arrival"))
     {
       this._skipArrivalScreen = true;
-      gameManager.pushScreen(new SectorArrivalScreen(this._sectorJSON.getJSONObject("Arrival: Sector").getString("text"), this.getName()));
+      gameManager.pushScreen(new SectorArrivalScreen(this._sectorJSON.getJSONObject("Sector Arrival").getString("text"), this.getName()));
     }
   }
 
@@ -297,7 +297,7 @@ export class Sector implements NodeObserver, GlobalObserver
     }
     else
     {
-      println("is: already: Node in this Sector!!!");
+      println("Node is already in this Sector!!!");
     }
   }
   
@@ -311,7 +311,7 @@ export class Sector implements NodeObserver, GlobalObserver
     }
     else
     {
-      println("is: not: Node in this Sector!!!");
+      println("Node is not in this Sector!!!");
     }
   }
   
@@ -341,7 +341,7 @@ export class Sector implements NodeObserver, GlobalObserver
     }
     else
     {
-      println("is: Actor already in this Sector!!!");
+      println("Actor is already in this Sector!!!");
     }
   }
   
@@ -357,7 +357,7 @@ export class Sector implements NodeObserver, GlobalObserver
     }
     else
     {
-      println("is: Actor not in this Sector!!!");
+      println("Actor is not in this Sector!!!");
     }
   }
 }

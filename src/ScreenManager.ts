@@ -6,7 +6,7 @@ export abstract class ScreenManager
   _screenStack: OWScreen[];
   _skipRender: boolean = false;
 
-  ScreenManager()
+  constructor()
   {
     this._screenStack = new Array<OWScreen>();
   }
@@ -74,7 +74,7 @@ export abstract class ScreenManager
 
     this._skipRender = true;
 
-    println("SWAP: " + newScreen);
+    println("SWAP:", newScreen);
   }
   
   pushScreen(nextScreen: OWScreen): void
@@ -91,7 +91,7 @@ export abstract class ScreenManager
 
     this._skipRender = true;
 
-    println("PUSH: " + nextScreen);
+    println("PUSH:", nextScreen);
   }
   
   popScreen(): void
