@@ -64,6 +64,11 @@ export let mediumFontData: Font;
   // to avoid interfering with game's right click.
   canvas.oncontextmenu = () => false;
 
+  canvas.ontouchstart = (e) => {
+    // Simulate right click on p5 when touching with a second finger
+    mouseButton = e.touches.length === 2 ? RIGHT : LEFT;
+  }
+
   const fullScreenButton = document.getElementById("full-screen-button");
   fullScreenButton.onclick = () => {
     if (document.fullscreenElement) {
