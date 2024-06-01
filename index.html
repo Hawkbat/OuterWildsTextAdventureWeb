@@ -21,12 +21,24 @@
             padding: 0;
         }
         
-        canvas {
-            object-fit: contain;
+        /* make the canvas as big as possible while fitting inside the screen, without changing the aspect ratio, and without using object-fit, WITHOUT USING */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
+
+        #game-canvas {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
     </style>
 </head>
 <body>
-    <canvas id="game-canvas" />
+    <main>
+        <canvas id="game-canvas" />
+    </main>
 </body>
 </html>

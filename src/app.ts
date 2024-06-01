@@ -56,8 +56,10 @@ export let mediumFontData: Font;
   const canvas = document.getElementById("game-canvas");
   createCanvas(960, 720, null, canvas);
 
-  canvas.style.width = "100%";
-  canvas.style.height = "100%";
+  // Prevent p5 from setting canvas size, we do it in css.
+  canvas.style.removeProperty("width");
+  canvas.style.removeProperty("height");
+
   // Disable context menu on canvas,
   // to avoid interfering with game's right click.
   canvas.oncontextmenu = () => false;
