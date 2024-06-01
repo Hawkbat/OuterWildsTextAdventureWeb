@@ -1,6 +1,7 @@
 import { AudioManager, SoundLibrary } from "./AudioManager";
 import { Button } from "./Button";
 import { SectorName } from "./Enums";
+import { GameSave } from "./GameSave";
 import { OWScreen } from "./Screen";
 import { SKIP_TITLE, gameManager } from "./app";
 import { exit } from "./compat";
@@ -10,8 +11,19 @@ export class TitleScreen extends OWScreen
   constructor()
   {
     super();
-    this.addButton(new Button("New Game", width/2 - 110, height - 50, 200, 50));
-    this.addButton(new Button("Quit", width/2 + 110, height - 50, 200, 50));
+    
+    const hasSave = GameSave.hasData();
+    
+    if (hasSave) {
+      this.addTitleButton("Continue", 110);
+      this.addTitleButton("Reset Progress", -110);
+    } else {
+      this.addTitleButton("New Game", 0);
+    }
+  }
+
+  addTitleButton(text: string, xOffset: number) {
+    this.addButton(new Button(text, width/2 + xOffset, height - 50, 200, 50));
   }
   
   onEnter(): void
@@ -48,12 +60,13 @@ export class TitleScreen extends OWScreen
   
   onButtonUp(button: Button): void
   {
-    if (button.id == "New Game")
+    if (button.id == "New Game" || button.id == "Continue")
     {
       gameManager.loadSector(SectorName.TIMBER_HEARTH);
     }
-    else if (button.id == "Quit")
+    else if (button.id == "Reset Progress")
     {
+      GameSave.clearData();
       exit();
     }
   }

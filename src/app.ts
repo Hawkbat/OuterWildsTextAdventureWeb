@@ -8,6 +8,7 @@ import { PlayerData } from "./PlayerData";
 import { StatusFeed } from "./StatusFeed";
 import { TimeLoop } from "./TimeLoop";
 import { Minim, preloadAudio, preloadJSONObject, println } from "./compat";
+import { GameSave } from "./GameSave";
 
 /*** GLOBALS ***/
 export const TEXT_SIZE: number = 14;
@@ -99,8 +100,7 @@ function initGame(): void
   messenger = new GlobalMessenger();
   feed = new StatusFeed();
   gameManager = new GameManager();
-  playerData = new PlayerData();
-  
+  playerData =  GameSave.loadData();
   gameManager.newGame();
   
   println("Load time:", (millis() - startLoadTime));
