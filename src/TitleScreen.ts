@@ -12,9 +12,7 @@ export class TitleScreen extends OWScreen
   {
     super();
     
-    const hasSave = GameSave.hasData();
-    
-    if (hasSave) {
+    if (GameSave.hasData()) {
       this.addTitleButton("Continue", 110);
       this.addTitleButton("Reset Progress", -110);
     } else {
