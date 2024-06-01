@@ -1,15 +1,21 @@
 {
-    "name": "outer-wilds-text-adventure",
-    "version": "0.1.0",
-    "devDependencies": {
-        "@types/p5": "^1.7.6",
-        "esbuild": "0.21.4",
-        "typescript": "^5.4.5"
-    },
-    "dependencies": {
-        "p5": "^1.9.4"
-    },
-    "scripts": {
-        "bundle": "esbuild src/app.ts --bundle --minify --sourcemap --outfile=bundle.js"
-    }
+  "name": "outer-wilds-text-adventure",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/p5": "^1.7.6",
+    "chokidar-cli": "^2.1.0",
+    "concurrently": "^6.5.1",
+    "esbuild": "0.21.4",
+    "lite-server": "^2.6.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "p5": "^1.9.4"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run watch\"",
+    "watch": "chokidar 'src/**/*' -c 'npm run bundle'",
+    "server": "lite-server",
+    "bundle": "esbuild src/app.ts --bundle --minify --sourcemap --outfile=bundle.js"
+  }
 }

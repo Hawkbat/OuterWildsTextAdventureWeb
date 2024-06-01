@@ -1,4 +1,5 @@
 import { Frequency, Curiosity } from "./Enums";
+import { GameSave } from "./GameSave";
 import { GlobalObserver, Message } from "./GlobalMessenger";
 import { START_WITH_LAUNCH_CODES, START_WITH_COORDINATES, START_WITH_SIGNALS, messenger, feed, locator, gameManager, START_WITH_CLUES, frequencyToString } from "./app";
 
@@ -66,11 +67,15 @@ export class PlayerData implements GlobalObserver
 			this._knowsSignalCoordinates = true;
 			feed.publish("learned signal coordinates", true);
 		}
+
+		GameSave.saveData(this);
 	}
 
 	killPlayer(): void
 	{
 		this._isDead = true;
+
+		GameSave.saveData(this);
 	}
 
 	isPlayerDead(): boolean
@@ -100,6 +105,8 @@ export class PlayerData implements GlobalObserver
 			this._knownFrequencies.push(frequency);
 			feed.publish("frequency identified: " + frequencyToString(frequency), true);
 		}
+
+		GameSave.saveData(this);
 	}
 
 	getFrequencyCount(): number
@@ -138,6 +145,8 @@ export class PlayerData implements GlobalObserver
 				feed.publish("information added to database", true);
 			}
 		}
+
+		GameSave.saveData(this);
 	}
 }
 

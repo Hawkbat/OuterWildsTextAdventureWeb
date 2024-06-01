@@ -8,6 +8,7 @@ import { PlayerData } from "./PlayerData";
 import { StatusFeed } from "./StatusFeed";
 import { TimeLoop } from "./TimeLoop";
 import { Minim, preloadAudio, preloadJSONObject, println } from "./compat";
+import { GameSave } from "./GameSave";
 
 /*** GLOBALS ***/
 export const TEXT_SIZE: number = 14;
@@ -53,11 +54,30 @@ export let mediumFontData: Font;
 
 (window as any).setup = function setup(): void
 {
-  const renderer = createCanvas(960, 720);
+  const canvas = document.getElementById("game-canvas");
+  createCanvas(960, 720, null, canvas);
+
+  // Prevent p5 from setting canvas size, we do it in css.
+  canvas.style.removeProperty("width");
+  canvas.style.removeProperty("height");
 
   // Disable context menu on canvas,
   // to avoid interfering with game's right click.
-  renderer.elt.oncontextmenu = () => false;
+  canvas.oncontextmenu = () => false;
+
+  canvas.ontouchstart = (e) => {
+    // Simulate right click on p5 when touching with a second finger
+    mouseButton = e.touches.length === 2 ? RIGHT : LEFT;
+  }
+
+  const fullScreenButton = document.getElementById("full-screen-button");
+  fullScreenButton.onclick = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      document.documentElement.requestFullscreen();
+    }
+  }
 
   noSmooth();
   colorMode(HSB, 360, 100, 100, 100);
@@ -80,8 +100,7 @@ function initGame(): void
   messenger = new GlobalMessenger();
   feed = new StatusFeed();
   gameManager = new GameManager();
-  playerData = new PlayerData();
-  
+  playerData =  GameSave.loadData();
   gameManager.newGame();
   
   println("Load time:", (millis() - startLoadTime));
