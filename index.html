@@ -21,7 +21,6 @@
             padding: 0;
         }
         
-        /* make the canvas as big as possible while fitting inside the screen, without changing the aspect ratio, and without using object-fit, WITHOUT USING */
         main {
             display: flex;
             justify-content: center;
@@ -34,11 +33,24 @@
             max-height: 100%;
         }
         
+        #full-screen-button {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            line-height: 1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            background: transparent;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
     <main>
-        <canvas id="game-canvas" />
+        <button id="full-screen-button">&#x26F6;</button>
+        <canvas id="game-canvas"></canvas>
     </main>
 </body>
 </html>

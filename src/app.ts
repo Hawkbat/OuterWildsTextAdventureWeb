@@ -64,6 +64,15 @@ export let mediumFontData: Font;
   // to avoid interfering with game's right click.
   canvas.oncontextmenu = () => false;
 
+  const fullScreenButton = document.getElementById("full-screen-button");
+  fullScreenButton.onclick = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      document.documentElement.requestFullscreen();
+    }
+  }
+
   noSmooth();
   colorMode(HSB, 360, 100, 100, 100);
   rectMode(CENTER);
