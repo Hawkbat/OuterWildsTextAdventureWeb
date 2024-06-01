@@ -53,11 +53,14 @@ export let mediumFontData: Font;
 
 (window as any).setup = function setup(): void
 {
-  const renderer = createCanvas(960, 720);
+  const canvas = document.getElementById("game-canvas");
+  createCanvas(960, 720, null, canvas);
 
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
   // Disable context menu on canvas,
   // to avoid interfering with game's right click.
-  renderer.elt.oncontextmenu = () => false;
+  canvas.oncontextmenu = () => false;
 
   noSmooth();
   colorMode(HSB, 360, 100, 100, 100);
